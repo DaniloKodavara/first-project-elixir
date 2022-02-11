@@ -14,7 +14,7 @@ defmodule Teste do
     puts("O numero #{numero} e par? #{Integer.is_even(numero)}")
   end
 
-  def inspect(parametro) do
+  defp inspect(parametro) do
     puts("Comecando a inspecao")
     puts(parametro)
     puts("Terminando a inspecao")
