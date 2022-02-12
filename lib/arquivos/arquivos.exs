@@ -13,11 +13,9 @@ defmodule Teste.Arquivos do
   def ler3(arquivo) do
     case File.read(arquivo) do
       {:ok, conteudo} -> IO.puts(conteudo)
-      {:error,erro} -> case erro do
-                         :enoent -> "Arquivo inexistente"
-                         :eacces -> "Arquivo sem permissao de leitura"
-                         _ -> "Erro desconhecido"
-                       end
+      {:error, :enoent} -> "Arquivo inexistente"
+      {:error, :eacces} -> "Arquivo sem permissao de leitura"
+      {:error,_} -> "Erro desconhecido"
     end
   end
 
