@@ -1,0 +1,1 @@
+Teste.Arquivos.open("teste")
