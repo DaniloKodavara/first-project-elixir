@@ -38,8 +38,10 @@ defmodule Teste.Arquivos do
   end
 
   defp close_file(file) do
-    File.close(file)
+    case File.close(file) do
+      :ok -> "Arquivo criado."
+      :error -> "Erro ao fechar arquivo."
+    end
   end
-
 
 end
